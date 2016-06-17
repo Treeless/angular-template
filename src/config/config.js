@@ -8,7 +8,7 @@
       envServiceProvider.config({
         domains: {
           development: ['localhost'],
-          production: ['compoundinterest.io']
+          production: ['example.com']
         },
         vars: {
           development: {

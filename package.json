@@ -1,5 +1,5 @@
 {
-  "name": "angular_app",
+  "name": "angular-template",
   "version": "1.0.0",
   "description": "Base Angular 1.x application template for development",
   "main": "app.js",

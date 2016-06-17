@@ -1,4 +1,4 @@
-# Base Angular 1.5 Application
+# Base Angular 1.x Application (WIP)
 
 ## Guide
 `npm install` (installs node modules)

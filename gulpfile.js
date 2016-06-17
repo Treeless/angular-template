@@ -110,7 +110,7 @@
   });
 
   gulp.task('watch-js', function() {
-    gulp.watch("**/*.js", { cwd: './src' }, ['build-js']);
+    gulp.watch(["**/*.js", '../sources.json'], { cwd: './src' }, ['build-js']);
   });
 
   gulp.task('unit', ["build-js", "watch-js"], function() {

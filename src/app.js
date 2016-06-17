@@ -1,5 +1,5 @@
 (function() {
-  angular.module('interestApp', ['ngRoute', 'ngSanitize', 'main'])
+  angular.module('webapp', ['ngRoute', 'ngSanitize', 'main'])
     .run(Run)
     .config(Config);
 

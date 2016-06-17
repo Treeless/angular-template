@@ -1,0 +1,3 @@
+## Folders to ignore for git language statistics ##
+- dist/
+- assets/css/

@@ -1,0 +1,12 @@
+{
+  "sources": [
+    "./bower_components/angular/angular.js",
+    "./bower_components/jquery/dist/jquery.min.js",
+    "./bower_components/bootstrap/dist/js/bootstrap.min.js",
+    "./bower_components/angular-route/angular-route.js",
+    "./bower_components/angular-local-storage/dist/angular-local-storage.js",
+    "./bower_components/angular-bootstrap/ui-bootstrap-tpls.js",
+    "./bower_components/angular-environment/dist/angular-environment.min.js",
+    "./dist/bundle.js"
+  ]
+}

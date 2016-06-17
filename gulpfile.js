@@ -23,17 +23,14 @@
     protractor = require('protractor').protractor,
     del = require('del');
 
-  var jsWatchList = [
-    "**/*.js"
-  ];
-
   gulp.task('javascript-filenames', function() {
-    return gulp.src(jsWatchList, {
+    return gulp.src("**/*.js", {
         cwd: "./src"
       })
       .pipe(filenames("javascript_files"))
   });
 
+  //Merge all our js into one file with maps. See dist/bundle.js
   gulp.task('build-js', ['javascript-filenames'], function() {
     var opts = {
       entries: filenames.get("javascript_files", "full"),
@@ -85,6 +82,8 @@
         livereload: {
           enable: true,
           filter: function(fileName) {
+            // Don't refresh when bundle.js changes or map. These change a lot.
+            // We care more about the individual js files, that are compiled from
             if (fileName.match(/bundle/) || fileName.match(/.map$/)) {
               return false;
             } else {
@@ -111,7 +110,7 @@
   });
 
   gulp.task('watch-js', function() {
-    gulp.watch(jsWatchList, { cwd: './src' }, ['build-js']);
+    gulp.watch("**/*.js", { cwd: './src' }, ['build-js']);
   });
 
   gulp.task('unit', ["build-js", "watch-js"], function() {

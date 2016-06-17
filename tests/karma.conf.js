@@ -37,7 +37,7 @@
       htmlReporter: {
         outputFile: 'output/units.html',
         pageTitle: 'Unit Tests',
-        subPageTitle: 'Webapp Admin Application'
+        subPageTitle: 'Angular-Template Application'
       },
 
       // web server port

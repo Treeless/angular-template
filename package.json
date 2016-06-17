@@ -1,10 +1,11 @@
 {
-  "name": "compound_interest",
+  "name": "angular_app",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Base Angular 1.x application template for development",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "gulp unit",
+    "e2e": "gulp e2e"
   },
   "author": "Matthew Rowlandson",
   "license": "ISC",

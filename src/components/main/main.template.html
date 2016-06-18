@@ -1,15 +1,15 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <h1 ng-bind-html="main.text"></h1>
+      <h1 id="main-message" ng-bind-html="main.text"></h1>
       <hr>
       <div class="panel panel-info">
         <div class="panel-body">
           <div class="row">
             <div class="col-md-12">
-              <button ng-click="main.successClicked()" class="btn btn-success btn-md">Success Button</button>
-              <button ng-click="main.failClicked()" class="btn btn-danger btn-md">Failure Button</button>
-              <button ng-click="main.reset()" class="btn btn-default btn-md"><i class="fa fa-2x fa-refresh"></i></button>
+              <button id="success-btn" ng-click="main.successClicked()" class="btn btn-success btn-md">Success Button</button>
+              <button id="fail-btn" ng-click="main.failClicked()" class="btn btn-danger btn-md">Failure Button</button>
+              <button id="reset-btn" ng-click="main.reset()" class="btn btn-default btn-md"><i class="fa fa-2x fa-refresh"></i></button>
             </div>
           </div>
         </div>

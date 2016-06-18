@@ -8,9 +8,6 @@
 * `gulp e2e` (runs the end to end tests with protractor and phantomJS)
 
 ## Todo
-* Controller example
 * Factory example
 * Filter example
 * Service example
-* Unit testing example
-* E2e testing example

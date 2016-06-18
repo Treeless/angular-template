@@ -20,7 +20,7 @@
     uglify = require('gulp-uglify'),
     ngAnnotate = require('gulp-ng-annotate'),
     KarmaServer = require('karma').Server,
-    protractor = require('protractor').protractor,
+    protractor = require('gulp-angular-protractor'),
     del = require('del');
 
   gulp.task('javascript-filenames', function() {
@@ -122,15 +122,16 @@
   });
 
   gulp.task('e2e', function(done) {
-    var args = ['--baseUrl', 'http://127.0.0.1:8888'];
     gulp.src(["./tests/e2e/*.js"])
       .pipe(protractor({
-        configFile: "tests/protractor.conf.js",
-        args: args
+        'configFile': "tests/protractor.conf.js",
+        'debug': false,
+        'autoStartStopServer': true
       }))
       .on('error', function(e) {
-        throw e;
-      });
+        console.log(e);
+      })
+      .on('end', done);
   });
 
   //Default task

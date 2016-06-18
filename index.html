@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+  <base href="/" />
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
+  <title>Angular Template Webapp</title>
   <!-- inject:js -->
   <script src="/bower_components/angular/angular.js"></script>
   <script src="/bower_components/jquery/dist/jquery.min.js"></script>
@@ -23,6 +25,7 @@
 
 <body ng-app="webapp">
   <div class="container-fluid">
+    <navbar></navbar>
     <div id="angular-view" ng-view>
       <span>
         <i class="fa fa-spinner fa-2x fa-spin"></i>

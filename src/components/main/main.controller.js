@@ -1,5 +1,5 @@
 (function() {
-  angular.module('main', [])
+  angular.module('main.controller', [])
     .controller('mainCtrl', MainController);
 
   MainController.$inject = [];

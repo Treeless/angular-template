@@ -1,5 +1,14 @@
 (function() {
-  angular.module('webapp', ['ngRoute', 'ngSanitize', 'main'])
+  angular.module('webapp', [
+      'ngRoute',
+      'ngSanitize',
+      'environment',
+      'configuration',
+      'LocalStorageModule',
+      'ui.bootstrap',
+      'main',
+      'nav'
+    ])
     .run(Run)
     .config(Config);
 
@@ -7,9 +16,9 @@
 
   function Run() {};
 
-  Config.$inject = ['$routeProvider'];
+  Config.$inject = ['$routeProvider', '$locationProvider', '$compileProvider', 'localStorageServiceProvider'];
 
-  function Config($routeProvider) {
+  function Config($routeProvider, $locationProvider, $compileProvider, localStorageServiceProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'src/components/main/main.template.html',
@@ -19,5 +28,9 @@
       .otherwise({
         redirectTo: '/oops'
       });
+
+    localStorageServiceProvider.setPrefix('webapp.');
+    $locationProvider.html5Mode(true);
+    $compileProvider.debugInfoEnabled(false);
   };
 }());
